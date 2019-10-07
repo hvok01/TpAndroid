@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/propDomicilio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#4CAF50"
+        android:text="@string/domicilio" />
+
+    <EditText
+        android:id="@+id/tbPropidadDomicilio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/calle"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@+id/propDomicilio" />
+
+    <TextView
+        android:id="@+id/tvAmbientes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#4CAF50"
+        android:text="@string/ambientes"
+        app:layout_constraintTop_toBottomOf="@+id/tbPropidadDomicilio" />
+
+    <EditText
+        android:id="@+id/tbAmbientes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/ambientes"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@+id/tvAmbientes"
+        android:importantForAutofill="no" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#4CAF50"
+        android:text="@string/tipo"
+        app:layout_constraintTop_toBottomOf="@+id/tbAmbientes" />
+
+    <Spinner
+        android:id="@+id/spinnerTipo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        android:spinnerMode="dropdown"
+        android:entries="@array/tipoPropiedad"/>
+
+    <TextView
+        android:id="@+id/tvUso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#4CAF50"
+        android:text="@string/uso"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerTipo"/>
+
+    <Spinner
+        android:id="@+id/spinnerUso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tvUso"
+        android:spinnerMode="dropdown"
+        android:entries="@array/usoPropiedad"/>
+
+    <TextView
+        android:id="@+id/tvPrecio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#4CAF50"
+        android:text="@string/precio"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerUso" />
+
+    <EditText
+        android:id="@+id/tbPrecioProp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/precio"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@+id/tvPrecio"
+        android:importantForAutofill="no" />
+
+    <TextView
+        android:id="@+id/tvDisponible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#4CAF50"
+        android:text="@string/disponible"
+        app:layout_constraintTop_toBottomOf="@+id/tbPrecioProp" />
+
+    <CheckBox
+        android:id="@+id/cbDisponible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/disponible"
+        app:layout_constraintTop_toBottomOf="@+id/tvDisponible" />
+
+    <Button
+        android:id="@+id/btnEditar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/editar"
+        app:layout_constraintTop_toBottomOf="@+id/cbDisponible" />
+
+</LinearLayout>

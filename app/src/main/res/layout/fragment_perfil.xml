@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/numeroDoc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#4CAF50"
+        android:text="@string/numero_documento" />
+
+    <EditText
+        android:id="@+id/tbDocumento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/documento"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@+id/numeroDoc" />
+
+    <TextView
+        android:id="@+id/apellido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#4CAF50"
+        android:text="@string/apellido"
+        app:layout_constraintTop_toBottomOf="@+id/tbDocumento" />
+
+    <EditText
+        android:id="@+id/tbApellidoEditar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/apellido_propietario"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@+id/apellido" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#4CAF50"
+        android:text="@string/nombre"
+        app:layout_constraintTop_toBottomOf="@+id/tbApellidoEditar" />
+
+    <EditText
+        android:id="@+id/tbNombreProp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/nombre"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#4CAF50"
+        android:text="@string/telefono"
+        app:layout_constraintTop_toBottomOf="@+id/tbNombreProp" />
+
+    <EditText
+        android:id="@+id/tbTelefono"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/telefono"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#4CAF50"
+        android:text="@string/correo"
+        app:layout_constraintTop_toBottomOf="@+id/tbTelefono" />
+
+    <EditText
+        android:id="@+id/tbCorreo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/correo"
+        android:importantForAutofill="no"
+        android:inputType="textEmailAddress"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#4CAF50"
+        android:text="@string/password"
+        app:layout_constraintTop_toBottomOf="@+id/tbCorreo" />
+
+    <EditText
+        android:id="@+id/tbClaveEditar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/clave"
+        android:importantForAutofill="no"
+        android:inputType="textPassword"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <Button
+        android:id="@+id/btnEditar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/editar"
+        app:layout_constraintTop_toBottomOf="@+id/tbClaveEditar" />
+
+</LinearLayout>

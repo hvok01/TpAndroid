@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/tvInquilinoDni"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#4CAF50"
+        android:text="@string/dni_inquilino" />
+
+    <TextView
+        android:id="@+id/tvDniInquilino2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/valuedni"
+        app:layout_constraintTop_toBottomOf="@+id/tvInquilinoDni" />
+
+    <TextView
+        android:id="@+id/tvApellidoInquilino"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#4CAF50"
+        android:text="@string/apellido_inquilino"
+        app:layout_constraintTop_toBottomOf="@+id/tvDniInquilino2" />
+
+    <TextView
+        android:id="@+id/tvValueApellidoInq"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/valueapellidoinquilino"
+        app:layout_constraintTop_toBottomOf="@+id/tvApellidoInquilino" />
+
+    <TextView
+        android:id="@+id/tvNombreInquilino"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#4CAF50"
+        android:text="@string/nombre_inquilino"
+        app:layout_constraintTop_toBottomOf="@+id/tvValueApellidoInq" />
+
+    <TextView
+        android:id="@+id/tvValueNombreInq"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/valuenombreinquilino"
+        app:layout_constraintTop_toBottomOf="@+id/tvNombreInquilino" />
+
+    <TextView
+        android:id="@+id/tvDireccionInquilino"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#4CAF50"
+        android:text="@string/direccion_inquilino"
+        app:layout_constraintTop_toBottomOf="@+id/tvValueNombreInq" />
+
+    <TextView
+        android:id="@+id/tvValueDireccionInq"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/valuedireccioninquilino"
+        app:layout_constraintTop_toBottomOf="@+id/tvDireccionInquilino" />
+
+    <TextView
+        android:id="@+id/tvTelefonoInquilino"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#4CAF50"
+        android:text="@string/telefono_inquilino"
+        app:layout_constraintTop_toBottomOf="@+id/tvValueDireccionInq" />
+
+    <TextView
+        android:id="@+id/tvValueTelefonoInq"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/valuetelefonoinquilino"
+        app:layout_constraintTop_toBottomOf="@+id/tvTelefonoInquilino" />
+
+    <TextView
+        android:id="@+id/espacio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#3F51B5" />
+
+</LinearLayout>

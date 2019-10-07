@@ -1,0 +1,78 @@
+<resources>
+    <string name="app_name">EstadoRealBeta</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+    <string name="acceder">Acceder</string>
+    <string name="nombre">Nombre</string>
+    <string name="usuario">Usuario</string>
+    <string name="password">Password</string>
+    <string name="cerrar_sesion">Cerrar Sesion</string>
+    <string name="salida">Salida</string>
+    <string name="contratos">Contratos</string>
+    <string name="pagos">Pagos</string>
+    <string name="inquilinos">Inquilinos</string>
+    <string name="propiedades">Propiedades</string>
+    <string name="perfil">Perfil</string>
+    <string name="numero_documento">Numero Documento</string>
+    <string name="apellido">Apellido</string>
+    <string name="documento">documento</string>
+    <string name="editar">Editar</string>
+    <string name="clave">Clave</string>
+    <string name="correo">Correo</string>
+    <string name="telefono">Telefono</string>
+    <string name="apellido_propietario">apellido propietario</string>
+    <string name="mis_propiedades">mis propiedades</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="domicilio">Domicilio</string>
+    <string name="calle">Calle</string>
+    <string name="ambientes">Ambientes</string>
+    <string name="tipo">Tipo</string>
+    <string-array name="tipoPropiedad">
+        <item>Local</item>
+        <item>Casa</item>
+        <item>Deposito</item>
+        <item>Departamento</item>
+    </string-array>
+    <string name="uso">Uso</string>
+    <string-array name="usoPropiedad">
+        <item>Comercial</item>
+        <item>Recidencial</item>
+    </string-array>
+    <string name="precio">Precio</string>
+    <string name="disponible">Disponible</string>
+    <string name="textview">TextView</string>
+    <string name="dni_inquilino">Dni Inquilino</string>
+    <string name="valuedni">valueDni</string>
+    <string name="apellido_inquilino">Apellido Inquilino</string>
+    <string name="valueapellidoinquilino">valueApellidoInquilino</string>
+    <string name="nombre_inquilino">Nombre Inquilino</string>
+    <string name="valuenombreinquilino">valueNombreInquilino</string>
+    <string name="direccion_inquilino">Direccion Inquilino</string>
+    <string name="valuedireccioninquilino">valueDireccionInquilino</string>
+    <string name="telefono_inquilino">Telefono Inquilino</string>
+    <string name="valuetelefonoinquilino">ValueTelefonoInquilino</string>
+    <string name="numero_de_pago">Numero de pago</string>
+    <string name="value_numero_pago">Value Numero Pago</string>
+    <string name="value_fecha">Value Fecha</string>
+    <string name="importe_pago">Importe Pago</string>
+    <string name="value_importe_pago">Value Importe Pago</string>
+    <string name="fecha_inicio_contrato">Fecha Inicio Contrato</string>
+    <string name="value_fecha_inicio_contrato">Value Fecha Inicio Contrato</string>
+    <string name="fecha_finalizacion_contrato">Fecha Finalizacion Contrato</string>
+    <string name="value_fecha_fin_contrato">Value Fecha Fin Contrato</string>
+    <string name="precio_contrato">Precio Contrato</string>
+    <string name="value_precio_contrato">Value Precio Contrato</string>
+</resources>
