@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvFechaInicioContrato"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#4CAF50"
+        android:text="@string/fecha_inicio_contrato" />
+
+    <TextView
+        android:id="@+id/tvValueFechaInicioContrato"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/value_fecha_inicio_contrato" />
+
+    <TextView
+        android:id="@+id/tvFechaDeFinalizacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#4CAF50"
+        android:text="@string/fecha_finalizacion_contrato" />
+
+    <TextView
+        android:id="@+id/tvValueFechaFinContrato"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/value_fecha_fin_contrato" />
+
+    <TextView
+        android:id="@+id/tvPrecioContrato"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#4CAF50"
+        android:text="@string/precio_contrato" />
+
+    <TextView
+        android:id="@+id/tvValuePrecioContrato"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/value_precio_contrato" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#3F51B5" />
+
+</LinearLayout>

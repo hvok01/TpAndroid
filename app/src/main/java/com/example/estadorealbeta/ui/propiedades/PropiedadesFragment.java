@@ -1,5 +1,6 @@
 package com.example.estadorealbeta.ui.propiedades;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.SpannableStringBuilder;
 import android.view.LayoutInflater;
@@ -18,7 +19,6 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import com.example.estadorealbeta.Nav_prop;
 import com.example.estadorealbeta.R;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.tabs.TabLayout;
@@ -30,63 +30,66 @@ import static java.lang.Double.parseDouble;
 
 public class PropiedadesFragment extends Fragment {
 
-    private EditText domicilio;
-    private EditText ambientes;
-    private Spinner spinnerTpo;
-    private Spinner spinneru;
-    private EditText precio;
-    private CheckBox cbDisponible;
-    private Button editar;
-    private Propiedad p;
+    private ViewPager viewPager;
+    private TabLayout tabLayout;
+    private AppBarLayout appBarLayout;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_propiedades, container, false);
 
-        p = new Propiedad("San Martin 223","3","Local","Comercial",18000,true);
+        viewPager= root.findViewById(R.id.viewPage);
+        appBarLayout = root.findViewById(R.id.appBar);
 
-        domicilio = root.findViewById(R.id.tbPropidadDomicilio);
-        ambientes = root.findViewById(R.id.tbAmbientes);
-        precio = root.findViewById(R.id.tbPrecioProp);
-        spinnerTpo = root.findViewById(R.id.spinnerTipo);
-        spinneru = root.findViewById(R.id.spinnerUso);
-        cbDisponible = root.findViewById(R.id.cbDisponible);
-        editar = root.findViewById(R.id.btnEditar);
+        tabLayout = new TabLayout(getContext());
 
-        domicilio.setText(p.getDomicilio());
-        ambientes.setText(p.getAmbientes());
-        precio.setText(p.getPrecio()+"");
+        appBarLayout.addView(tabLayout);
 
-        if(p.isDisponible()) {
-            cbDisponible.setChecked(true);
-        }
+        ViewPageAdapter vp = new ViewPageAdapter(getChildFragmentManager());
 
-        editar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        Propiedad a = new Propiedad("Belgrano 443","4","Casa","Recidencial",18000,true);
+        Propiedad b = new Propiedad("San Martin 225","3","Local","Comercial",19000,true);
 
-                if(domicilio.getText().toString() != "" && ambientes.getText().toString() != ""
-                        && precio.getText().toString() != "") {
+        vp.addFragment(new PropiedadesTab(a),"prop1");
+        vp.addFragment(new PropiedadesTab(b),"prop2");
 
-                    p.setDomicilio(domicilio.getText().toString());
-                    p.setAmbientes(ambientes.getText().toString());
-                    p.setPrecio(parseDouble(precio.getText().toString()));
-                    p.setTipo(spinnerTpo.getSelectedItem().toString());
-                    p.setUso(spinneru.getSelectedItem().toString());
-                    if(cbDisponible.isChecked()) {
-                        p.setDisponible(true);
-                    } else {
-                        p.setDisponible(false);
-                    }
-                    Toast.makeText(getContext(), "Cambios guardados con exito", Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(getContext(), "Campos vacíos", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
+        viewPager.setAdapter(vp);
+
+        tabLayout.setupWithViewPager(viewPager);
 
         return root;
 
+    }
+
+    public class ViewPageAdapter extends FragmentPagerAdapter {
+
+        private List<Fragment> fragmentList = new ArrayList<>();
+        private  List<String> titulosFragments = new ArrayList<>();
+
+        public ViewPageAdapter(FragmentManager fm) {
+            super(fm);
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+            return fragmentList.get(position);
+        }
+
+        @Override
+        public int getCount() {
+            return fragmentList.size();
+        }
+
+        @Nullable
+        @Override
+        public CharSequence getPageTitle(int position) {
+            return titulosFragments.get(position);
+        }
+
+        public void addFragment(Fragment fragment, String titulo) {
+            fragmentList.add(fragment);
+            titulosFragments.add(titulo);
+        }
     }
 
 }

@@ -1,7 +1,9 @@
 package com.example.estadorealbeta;
 
+import android.net.Uri;
 import android.os.Bundle;
 
+import com.example.estadorealbeta.ui.propiedades.PropiedadesTab;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -22,7 +24,7 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements PropiedadesTab.OnFragmentInteractionListener {
 
     private AppBarConfiguration mAppBarConfiguration;
 
@@ -71,5 +73,10 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
+    }
+
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
     }
 }

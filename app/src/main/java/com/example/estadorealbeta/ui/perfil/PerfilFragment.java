@@ -45,6 +45,13 @@ public class PerfilFragment extends Fragment {
         claveProp = root.findViewById(R.id.tbClaveEditar);
         editar = root.findViewById(R.id.btnEditar);
 
+        documentoProp.setEnabled(false);
+        apellidoProp.setEnabled(false);
+        nombreProp.setEnabled(false);
+        telefonoProp.setEnabled(false);
+        correoProp.setEnabled(false);
+        claveProp.setEnabled(false);
+
 
         documentoProp.setText(p.getDni());
         apellidoProp.setText(p.getApellido());
@@ -56,6 +63,15 @@ public class PerfilFragment extends Fragment {
         editar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                if(!documentoProp.isEnabled()) {
+                    documentoProp.setEnabled(true);
+                    apellidoProp.setEnabled(true);
+                    nombreProp.setEnabled(true);
+                    telefonoProp.setEnabled(true);
+                    correoProp.setEnabled(true);
+                    claveProp.setEnabled(true);
+                }
 
                 if(documentoProp.getText().toString() != "" && apellidoProp.getText().toString() != ""
                 && nombreProp.getText().toString() != "" && telefonoProp.getText().toString() != ""
